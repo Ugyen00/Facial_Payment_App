@@ -28,7 +28,10 @@ export default function Register() {
     data.append("phone", formData.phone);
     data.append("password", formData.password);
 
-    await axios.post("http://localhost:5000/register", data);
+    await axios.post(
+      "https://facial-payment-app-backend.onrender.com/register",
+      data
+    );
     setStarted(true);
   };
 
@@ -120,7 +123,7 @@ export default function Register() {
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-4">Face Registration</h2>
             <img
-              src="http://localhost:5000/video_feed"
+              src="https://facial-payment-app-backend.onrender.com/video_feed"
               alt="Video Feed"
               className="rounded-lg mx-auto mb-4"
             />

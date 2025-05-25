@@ -30,9 +30,12 @@ export default function HomePage() {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/wallet", {
-          params: { phone },
-        });
+        const res = await axios.get(
+          "https://facial-payment-app-backend.onrender.com/wallet",
+          {
+            params: { phone },
+          }
+        );
         if (res.data.success) {
           setBalance(res.data.balance);
         }
@@ -58,9 +61,12 @@ export default function HomePage() {
 
   const fetchTransactions = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/transactions", {
-        params: { phone },
-      });
+      const res = await axios.get(
+        "https://facial-payment-app-backend.onrender.com/transactions",
+        {
+          params: { phone },
+        }
+      );
       if (res.data.success) {
         setTransactions(res.data.transactions);
       }
@@ -74,10 +80,13 @@ export default function HomePage() {
     if (!isNaN(amount) && amount > 0) {
       setIsAddingFund(true);
       try {
-        const res = await axios.post("http://localhost:5000/add_fund", {
-          phone,
-          amount,
-        });
+        const res = await axios.post(
+          "https://facial-payment-app-backend.onrender.com/add_fund",
+          {
+            phone,
+            amount,
+          }
+        );
 
         if (res.data.success) {
           setBalance(res.data.new_balance);

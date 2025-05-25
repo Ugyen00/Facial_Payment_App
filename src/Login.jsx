@@ -15,10 +15,13 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
-        phone,
-        password,
-      });
+      const res = await axios.post(
+        "https://facial-payment-app-backend.onrender.com/login",
+        {
+          phone,
+          password,
+        }
+      );
 
       if (res.data.success) {
         localStorage.setItem("isLoggedIn", "true");
