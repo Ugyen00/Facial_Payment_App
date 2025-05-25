@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+.chat_NoMindBhutan ::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+  height: 6px;
+}
+
+.chat_NoMindBhutan ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4); /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.chat_NoMindBhutan ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6); /* Thumb color on hover */
+}
+
+.chat_NoMindBhutan ::-webkit-scrollbar-track {
+  background: transparent; /* Track color */
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+/* For Firefox */
+.chat_NoMindBhutan {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+}
+
+/* Hide the scrollbar for .no-scroll class in all browsers */
+.no-scroll {
+  /* Hide the scrollbar in Firefox */
+  scrollbar-width: none;
+}
+
+/* Hide the scrollbar in Webkit-based browsers like Chrome and Safari */
+.no-scroll ::-webkit-scrollbar {
+  display: none;
+}
